@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstCore", "FirstCore\FirstCore.csproj", "{E7634247-34D6-4C97-A661-9773D1813726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMFApi", "RMFApi\RMFApi.csproj", "{1ADB1FC3-79A4-40FF-9A38-049F3BDAF8F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7634247-34D6-4C97-A661-9773D1813726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7634247-34D6-4C97-A661-9773D1813726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7634247-34D6-4C97-A661-9773D1813726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7634247-34D6-4C97-A661-9773D1813726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ADB1FC3-79A4-40FF-9A38-049F3BDAF8F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ADB1FC3-79A4-40FF-9A38-049F3BDAF8F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ADB1FC3-79A4-40FF-9A38-049F3BDAF8F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ADB1FC3-79A4-40FF-9A38-049F3BDAF8F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CA9707F-E8B9-4C18-86AB-09FE959BBAE9}
+	EndGlobalSection
+EndGlobal
