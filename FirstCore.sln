@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstCore", "FirstCore\FirstCore.csproj", "{E7634247-34D6-4C97-A661-9773D1813726}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMFApi", "RMFApi\RMFApi.csproj", "{1ADB1FC3-79A4-40FF-9A38-049F3BDAF8F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMFApi", "RMFApi\RMFApi.csproj", "{1ADB1FC3-79A4-40FF-9A38-049F3BDAF8F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

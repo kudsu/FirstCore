@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using FirstCore.Models;
+using FirstCore.Models.RMFfitters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +12,36 @@ namespace FirstCore.Controllers
 {
     public class TestController : Controller
     {
+        public IActionResult TokenCustomerValidateTest()
+        {
+            Dictionary<string, object> payLoad = new Dictionary<string, object>();
+            payLoad.Add("sub", "rober");
+            payLoad.Add("jti", Guid.NewGuid().ToString());
+            payLoad.Add("nbf", null);
+            payLoad.Add("exp", null);
+            payLoad.Add("iss", "roberIssuer");
+            payLoad.Add("aud", "roberAudience");
+            payLoad.Add("age", 30);
+
+            var encodeJwt = JWTTokenOptions.CreateToken(payLoad, 30);
+
+            var result = JWTTokenOptions.Validate(encodeJwt, (load) =>
+            {
+                var success = true;
+                //验证是否包含aud 并等于 roberAudience
+                success = success && load["aud"]?.ToString() == "roberAudience";
+
+                //验证age>20等
+                int.TryParse(load["age"].ToString(), out int age);
+                //Assert.IsTrue(age > 30);
+                //其他验证 jwt的标识 jti是否加入黑名单等
+
+                return success;
+            });
+            //Assert.IsTrue(result);
+            return Content("");
+        }
+        [TokenFitter(Uid = "1,3")]
         public IActionResult Index()
         {
             //string name = Request.Query["name"];
@@ -35,6 +67,10 @@ namespace FirstCore.Controllers
 
             return View();
 
+        }
+        public IActionResult Login()
+        {
+            return View();
         }
     }
     public class Customer
