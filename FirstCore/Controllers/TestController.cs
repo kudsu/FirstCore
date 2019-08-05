@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using FirstCore.Model;
 using FirstCore.Models;
 using FirstCore.Models.RMFfitters;
 using Microsoft.AspNetCore.Http;
@@ -12,6 +13,17 @@ namespace FirstCore.Controllers
 {
     public class TestController : Controller
     {
+        //构造函数注入上下文
+        private readonly rmfContext _context;
+        public TestController(rmfContext Context)
+        {
+            _context = Context;
+        }
+        public IActionResult Tset()
+        {
+            var aa = _context.Invitation.ToList();
+            return Content("1");
+        }
         public IActionResult TokenCustomerValidateTest()
         {
             Dictionary<string, object> payLoad = new Dictionary<string, object>();
@@ -41,7 +53,7 @@ namespace FirstCore.Controllers
             //Assert.IsTrue(result);
             return Content("");
         }
-        [TokenFitter(Uid = "1,3")]
+        [TokenFitter]
         public IActionResult Index()
         {
             //string name = Request.Query["name"];
