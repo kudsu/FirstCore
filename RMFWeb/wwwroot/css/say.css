@@ -1,0 +1,466 @@
+html {
+	overflow-x: hidden
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+figure {
+	margin: 0;
+	padding: 0
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+fieldset,
+img {
+	border: 0
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+b,
+i {
+	font-style: normal;
+	font-weight: normal
+}
+
+ol,
+ul {
+	list-style: none
+}
+
+caption,
+th {
+	text-align: left
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%
+}
+
+q:before,
+q:after {
+	content: ''
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal
+}
+
+sup {
+	vertical-align: text-top
+}
+
+sub {
+	vertical-align: text-bottom
+}
+
+input,
+textarea,
+select,
+button {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit
+}
+
+input,
+textarea,
+select {
+	#font-size: 100%
+}
+
+legend {
+	color: #000
+}
+
+iframe {
+	overflow: hidden
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block
+}
+
+iframe {
+	border: 0
+}
+
+textarea {
+	resize: vertical;
+	overflow-y: auto
+}
+
+body {
+	line-height: 1.334;
+	font-size: 12px
+}
+
+a {
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: underline
+}
+
+a div,
+a strong,
+a span,
+a i,
+a s {
+	#cursor: hand
+}
+
+@font-face {
+	font-family: punctuation;
+	unicode-range: U+FF0C, U+3002, U+FF1A, U+FF1B, U+FF1F, U+3001, U+2026, U+00B7;
+	src: local(Simhei), local(Simsun)
+}
+
+@font-face {
+	font-family: punctuation;
+	unicode-range: U+201C-201D, U+2018-2019;
+	src: local(STHeiti), local(Simhei)
+}
+
+@font-face {
+	font-family: punctuation;
+	unicode-range: U+2014;
+	src: local("Microsoft Yahei"), local(Simhei)
+}
+
+@font-face {
+	font-family: punctuation;
+	src: local('Fix Firefox');
+	unicode-range: U+270C
+}
+
+body,
+input,
+textarea,
+select,
+button {
+	font-family: punctuation, "PingFangSC-Regular", "Microsoft Yahei", "sans-serif";
+	-webkit-font-smoothing: subpixel-antialiased
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden
+}
+
+.clearfix:after {
+	clear: both
+}
+
+.clearfix {
+	zoom: 1
+}
+
+.textoverflow {
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	vertical-align: -2px;
+	*vertical-align: 1px;
+	_width: 100%
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.textoverflow {
+		vertical-align: 0
+	}
+}
+
+.none {
+	display: none !important
+}
+
+.hide_clip {
+	display: none
+}
+
+.left {
+	float: left
+}
+
+.right {
+	float: right
+}
+
+
+.bor,
+.tbor,
+.bbor,
+.lbor,
+.rbor,
+.bor2,
+.tbor2,
+.bbor2,
+.lbor2,
+.rbor2,
+.bgr,
+.bgr2,
+.bgr3,
+.bor3,
+.lbor3,
+.rbor3,
+.bbor3,
+.tbor3,
+.bor4,
+.lbor4,
+.rbor4,
+.bbor4,
+.tbor4,
+.bor5,
+.lbor5,
+.rbor5,
+.bbor5,
+.tbor5 {
+	border-width: 1px
+}
+
+.bor,
+.bgr,
+.bgr2,
+.bgr3,
+.bor2,
+.bor3,
+.bor4,
+.bor5 {
+	border-style: solid
+}
+
+.tbor,
+.tbor2,
+.tbor3,
+.tbor4,
+.tbor5 {
+	border-style: solid none none none
+}
+
+.bbor,
+.bbor2,
+.bbor3,
+.bbor4,
+.bbor5 {
+	border-style: none none solid none
+}
+
+.lbor,
+.lbor2,
+.lbor3,
+.lbor4,
+.lbor5 {
+	border-style: none none none solid
+}
+
+.rbor,
+.rbor2,
+.rbor3,
+.rbor4,
+.rbor5 {
+	border-style: none solid none none
+}
+
+/* 张金奎 */
+.mod_comments .comments_list .comments_item {
+	list-style: none;
+	padding-top: 15px
+}
+
+.mod_comments .comments_list .bor3 {
+	border-width: 1px 0 0;
+	border-style: dashed;
+	_border-width: 0 0 1px
+}
+
+.mod_comments .comments_list .comments_item .comments_item_bd {
+	padding: 0 0 0 40px;
+	position: relative;
+	*zoom: 1
+}
+
+.mod_comments .comments_list .ui_avatar {
+	position: absolute;
+	left: 0;
+	top: 0
+}
+
+.mod_comments .comments_list .ui_avatar img {
+	width: 30px;
+	height: 30px;
+	border-radius: 2px
+}
+.app_mood .main_wrap {
+	width: 100%;
+	float: left;
+	min-height: 1px
+}
+.app_mood .main {
+	margin-right: 238px;
+	padding: 20px 20px 20px;
+	border-width: 0;
+	min-height: 1000px;
+	_height: 1000px
+}
+.app_mood .sidebar {
+	float: left;
+	_display: inline;
+	width: 200px;
+	margin: 0 0 0 -218px
+}
+.feed .avatar a {
+	display: block;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 4px
+}
+
+.mod_feed_lst .feed {
+	margin-bottom: -1px;
+	position: relative;
+	padding: 0 0 10px 70px;
+	line-height: 1.5;
+	min-height: 55px;
+	_height: 55px;
+	word-wrap: break-word
+}
+.mod_feed_lst .feed .bd {
+	font-size: 14px;
+	padding: 9px 15px 0;
+	line-height: 25px
+}
+.mod_feed_lst .feed .avatar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	border-radius: 4px
+}
+.mod_feed_lst .feed .avatar a,
+.mod_feed_lst .feed .avatar img {
+	width: 50px;
+	height: 50px
+}
+.mod_feed_lst .feed .ft {
+	padding: 3px 15px 6px;
+	height: 20px
+}
+.mod_feed_lst .feed .ft .info {
+	float: left
+}
+.mod_feed_lst .feed .ft .op {
+	float: right
+}	
+.box_extra {
+	padding: 15px;
+	border-width: 1px 0 0;
+	position: relative;
+	_height: 25px
+}
+
+
+
+
+
+.more-edit-items {
+	display: inline-block;
+	#display: inline;
+	#zoom: 1;
+	position: relative;
+	z-index: 40
+}
+
+.more-edit-items .dropdown-trigger {
+	position: relative;
+	z-index: 30;
+	outline: 0 none
+}
+
+.dropdown-open .dropdown-trigger:hover {
+	text-decoration: none
+}
+
+.more-edit-items .ui_trig_b {
+	vertical-align: 2px;
+	margin-left: 5px
+}
+
+.more-edit-items .menu-item-list {
+	position: absolute;
+	top: -9px;
+	left: -1px;
+	border-width: 1px;
+	z-index: 29;
+	padding-top: 32px;
+	display: none
+}
+
+.dropdown-open .menu-item-list {
+	display: block
+}
+
+
+
+
+
+
+

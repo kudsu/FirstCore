@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登录</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin-left: auto;
+            margin-right: auto;
+            margin-TOP: 150PX;
+            width: 20em;
+        }
+    </style>
+</head>
+<body>
+    <h3 style="width: 120px; margin: 20px auto">用户登录</h3>
+    <div class="input-group">
+        <input id="userName" runat="server" type="text" class="form-control" placeholder="用户名" />
+    </div>
+    <br />
+    <div class="input-group">
+        <input id="passWord" runat="server" type="password" class="form-control" placeholder="密码" />
+    </div>
+    <br />
+    <button type="button" id="Button1" runat="server" style="width: 320px;" class="btn btn-primary">登 录</button>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        $("#Button1").click(function () {
+            var name = $("#userName").val();
+            var pwd = $("#passWord").val();
+
+        })
+    </script>
+</body>
+</html>
