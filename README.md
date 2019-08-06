@@ -1,7 +1,26 @@
-﻿scaffold-dbcontext 命令使用说明
+# 准备工作：
+### 一、添加引用:
+
+Microsoft.EntityFrameworkCore
+
+Microsoft.EntityFrameworkCore.SqlServer
+
+Microsoft.EntityFrameworkCore.Tools
+
+Microsoft.EntityFrameworkCore.Design
+
+Microsoft.EntityFrameworkCore.SqlServer.Design	
+
+### 二、然后,我们在VS的工具选项中,选择NuGet包管理器,选择程序包管理控制台
+
+#### 1、输入命令行:
+
+Scaffold-DbContext "这里输入你的数据库连接字符串" Microsoft.EntityFrameworkCore.SqlServer
+
+#### 2、scaffold-dbcontext 命令使用说明
 工具的scaffold-dbcontext（数据库上下文脚手架）指令来生成models和context。
 
-指令详细介绍：
+#### 3、指令详细介绍：
 
 Scaffold-DbContext [-Connection] <String> [-Provider] <String> [-OutputDir <String>] [-Context <String>] 
 [-Schemas <String>] [-Tables <String>] [-DataAnnotations] [ -Force] [-Project <String>] 
@@ -43,27 +62,9 @@ PARAMETERS
 
  
 
-例子：Scaffold-DbContext "Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
-
-作者：骇客HK
-
+#### 4、例子：
+#### Scaffold-DbContext "Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
 
-准备工作：
-为了方便你们复制..我列一下:
 
-Microsoft.EntityFrameworkCore
 
-Microsoft.EntityFrameworkCore.SqlServer
-
-Microsoft.EntityFrameworkCore.Tools
-
-Microsoft.EntityFrameworkCore.Design
-
-Microsoft.EntityFrameworkCore.SqlServer.Design
-
-然后,我们在VS的工具选项中,选择NuGet包管理器,选择程序包管理控制台
-
-输入命令行:
-
-Scaffold-DbContext "这里输入你的数据库连接字符串" Microsoft.EntityFrameworkCore.SqlServer
